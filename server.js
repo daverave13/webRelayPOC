@@ -26,6 +26,7 @@ function getState() {
   if (xmlDoc.readyState == 4) {
     const xmlLength = xmlDoc.statusText.rawPacket.data.length;
     const bytes = xmlDoc.statusText.rawPacket.data;
+    state = "";
     for (let i = 0; i < xmlLength; i++) {
       state += String.fromCharCode(bytes[i]);
     }
